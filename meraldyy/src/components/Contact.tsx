@@ -22,7 +22,7 @@ export default function Contact() {
         </h2>
 
         <a
-          href="mailto:hello@meraldy.dev"
+          href="mailto:meraldyridho@gmail.com"
           className="contact-email reveal"
           data-cursor="link"
         >
@@ -30,7 +30,7 @@ export default function Contact() {
         </a>
 
         <a
-          href="mailto:hello@meraldy.dev"
+          href="mailto:meraldyridho@gmail.com"
           className="btn btn--solid contact-cta reveal"
           ref={ctaRef}
           data-cursor="button"

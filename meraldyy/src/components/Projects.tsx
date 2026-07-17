@@ -106,38 +106,54 @@ function ProjectRow({ project, index }: { project: Project; index: number }) {
 
   return (
     <article
-      className={`project ${flip ? "project--flip" : ""}`}
-      ref={cardRef}
-      onMouseMove={onMouseMove}
-      onMouseLeave={onMouseLeave}
-      data-cursor="project"
-    >
-      <div className="project-num reveal" data-cursor="link">
-        {project.num}
+  className={`project ${flip ? "project--flip" : ""}`}
+  ref={cardRef}
+  onMouseMove={onMouseMove}
+  onMouseLeave={onMouseLeave}
+  data-cursor="project"
+>
+  <div className="project-num reveal" data-cursor="link">
+    {project.num}
+  </div>
+
+  <div className={`project-body ${flip ? "project-body--flip" : ""}`}>
+    <div className="project-meta">
+      <span className="project-meta-cat mono-label">
+        {project.category}
+      </span>
+      <span className="project-meta-year mono-label">
+        {project.year}
+      </span>
+    </div>
+
+    <h3 className="project-title draw-line" data-cursor="link">
+      {project.title}
+    </h3>
+
+    {/* Screenshot dipindah ke atas */}
+    <div className="project-media">
+      <img
+        src={project.image}
+        alt={project.title}
+        loading="lazy"
+      />
+    </div>
+
+    {/* Deskripsi dipindah ke bawah */}
+    <div className="project-content">
+      <p className="project-desc">
+        {project.desc}
+      </p>
+
+      <div className="project-tags">
+        {project.tags.map((t) => (
+          <span key={t} className="project-tag">
+            {t}
+          </span>
+        ))}
       </div>
-
-      <div className={`project-body ${flip ? "project-body--flip" : ""}`}>
-        <div className="project-meta">
-          <span className="project-meta-cat mono-label">{project.category}</span>
-          <span className="project-meta-year mono-label">{project.year}</span>
-        </div>
-
-        <h3 className="project-title draw-line" data-cursor="link">
-          {project.title}
-        </h3>
-
-        <div className="project-media">
-          <img src={project.image} alt={project.title} loading="lazy" />
-          <div className="project-media-overlay">
-            <p className="project-desc">{project.desc}</p>
-            <div className="project-tags">
-              {project.tags.map((t) => (
-                <span key={t} className="project-tag">{t}</span>
-              ))}
-            </div>
-          </div>
-        </div>
-      </div>
-    </article>
+    </div>
+  </div>
+</article>
   );
 }
