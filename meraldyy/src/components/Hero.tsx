@@ -1,5 +1,6 @@
 import { useMagnetic } from "../hooks/useMotion";
 import "./Hero.css";
+import hero from "../assets/hero.png"
 
 const words = [
   { text: "Create.", delay: 0.3 },
@@ -59,10 +60,9 @@ export default function Hero({ ready }: { ready: boolean }) {
         <div className={`hero-right ${ready ? "in" : ""}`}>
           <div className="hero-portrait" data-cursor="image">
             <img
-              src="src/assets/profile.jpeg"
-              alt="Portrait of Meraldy Ridho Fadillah"
-              loading="eager"
-            />
+                src={hero}
+                alt=" Meraldy"
+              />
             <div className="hero-portrait-tint" />
             <div className="hero-portrait-grid" />
           </div>

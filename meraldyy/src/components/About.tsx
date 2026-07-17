@@ -1,4 +1,5 @@
 import "./About.css";
+import aboutImg from "../assets/about.jpeg";
 
 const timeline = [
   { year: "2023", label: "Started the journey", desc: "Dove into web development — HTML, CSS, JavaScript fundamentals." },
@@ -19,10 +20,10 @@ export default function About() {
         <div className="about-quote reveal-text" data-reveal-group>
           <div className="about-quote-img-wrapper">
             <div className="about-quote-img">
-              <img 
-                src="src/assets/about.jpeg" 
-                alt="Quote Meraldy" 
-              />
+              <img
+                  src={aboutImg}
+                  alt="Quote Meraldy"
+                />
               {/* Dua lapisan dekoratif wajib dari style hero */}
               <div className="about-quote-img-tint"></div>
               <div className="about-quote-img-grid"></div>

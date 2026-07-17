@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { useScrollProgress } from "../hooks/useMotion";
 import "./Navbar.css";
+import logo from "../assets/logo.png"
 
 const links = [
   { label: "Work", href: "#work" },
@@ -27,11 +28,10 @@ export default function Navbar({ ready }: { ready: boolean }) {
         }`}
       >
         <a href="#top" className="nav-logo" data-cursor="link">
-          <img 
-            src="src/assets/logo.png" 
-            alt="Meraldy Logo" 
-            className="nav-logo-img" 
-          />
+          <img
+              src={logo}
+              alt="Logo"
+            />
         </a>
 
         <nav className="nav-links">
