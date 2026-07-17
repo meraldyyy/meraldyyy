@@ -29,11 +29,11 @@ export default function Navbar({ ready }: { ready: boolean }) {
       >
         <a href="#top" className="nav-logo" data-cursor="link">
           <img
-              src={logo}
-              alt="Logo"
-            />
+            className="nav-logo-img"
+            src={logo}
+            alt="Logo"
+          />
         </a>
-
         <nav className="nav-links">
           {links.map((l) => (
             <a key={l.href} href={l.href} className="nav-link" data-cursor="link">
